@@ -1,0 +1,35 @@
+<zk>
+	<style>.z-button i { font-size: 24px; }</style>
+	<div align="center" style="margin-top:50px;" apply="controller.LoginController">
+		<grid width="40%" vflex="1">
+			<auxhead>
+				<auxheader colspan="2" label="Login Form"
+					style="font-size:16px" image="/images/user_icon.png" />
+			</auxhead>
+			<columns visible="false">
+				<column />
+				<column />
+			</columns>
+			<rows>
+				<row>
+					User Name
+					<textbox id="username" hflex="1"
+						constraint="no empty: Nhập username" />
+				</row>
+				<row>
+					Password
+					<textbox type="password" id="password" hflex="1"
+						constraint="no empty: Nhập password" />
+				</row>
+				
+				<row spans="2" align="right">
+					<hlayout>
+						<label id="errorMsg" />
+						<button id="resetButton" label="Reset" />
+						<button id="submitButton" label="Login" />
+					</hlayout>
+				</row>
+			</rows>
+		</grid>
+	</div>
+</zk>

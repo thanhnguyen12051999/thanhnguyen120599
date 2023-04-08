@@ -1,0 +1,51 @@
+<?init class="org.zkoss.zk.ui.util.Composition"
+arg0="/template/layout.zul"?>
+<vlayout width="100%" apply="controller.SearchController"
+	self="@define(content)">
+	<div height="50px" style="margin-top:20px;">EAR MANAGEMENT:</div>
+	<hbox align="center" style="margin-bottom: 10px;">
+		Keyword:
+		<textbox id="keywordBox" />
+		<button id="searchButton" label="Search"
+			image="/img/search.png" />
+		<button id="addButton" label="Add" />
+	</hbox>
+	<listbox id="earListbox" rows="3"
+		emptyMessage="No ear found in the result" mold="paging"
+		pageSize="3">
+		<listhead>
+			<listheader label="produce" />
+			<listheader label="name" />
+			<listheader label="connect" />
+			<listheader label="Price" />
+			<listheader label="management" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.produce}"></listcell>
+				<listcell label="${each.name}"></listcell>
+				<listcell label="${each.connect}"></listcell>
+				<listcell>				
+					<label value="${each.price}" />
+				</listcell>
+				<listcell>
+					<hlayout>
+						<button label="Edit"
+							forward="onClick=earListbox.onEdit" id="Edit${each.id}" />
+						<button label="Delete"
+							forward="onClick=earListbox.onDelete" id="Delete${each.id}" />
+					</hlayout>
+				</listcell>
+			</listitem>
+		</template>
+	</listbox>
+	<hlayout style="margin-top:20px" width="100%">
+		<image id="previewImage" width="250px" />
+		<vlayout hflex="1">
+			<label id="produceLabel" />
+			<label id="connectLabel" />
+			<label id="priceLabel" />
+			<label id="typeLabel" />
+		</vlayout>
+	</hlayout>
+</vlayout>

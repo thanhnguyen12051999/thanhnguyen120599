@@ -1,0 +1,8 @@
+<window id="modalDialog" closable="true" title="Add New Popup" border="normal"
+apply="controller.AddEarController">
+<!-- Them cac truong thuoc tinh Ear -->
+<image id="previewImage" />
+Upload your hot shot:
+<fileupload label="Upload" onUpload="previewImage.setContent(event.media)" />
+<button id="addEarBtn" hflex="1" label="Add Ear"/>
+</window></zk>

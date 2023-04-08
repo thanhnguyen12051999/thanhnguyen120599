@@ -1,0 +1,36 @@
+<vlayout vflex="1" hflex="1">
+	<div vflex="3">
+		<separator class="header-bar" />
+		<label class="header-title1" value="🎧🎶🎶 " />
+		<label class="header-title2"
+			value="Headphone House" />
+	</div>
+	<div vflex="1" style="border-bottom:0px; background-color: #d18324">
+		<menubar id="menubar" vflex="1" width="100%" autodrop="true"
+			style="border?bottom:0px; background-color: #d18324">
+			<menuitem style="background-color: #858599" label="Home" href="/home.zul"/>
+			<menu label="produce">
+				<menupopup>
+					<menuitem label="Apple"
+						href="/home.zul?type=Apple" />
+					<menuitem label="Sony"
+						href="/home.zul?type=Sony" />
+					<menuitem label="Sony"
+						href="/home.zul?type=Sony" />
+					<menuitem label="Sony"
+						href="/home.zul?type=Sony" />
+				</menupopup>
+			</menu>
+			<menu label="Headphone Type">
+				<menupopup>
+					<menuitem label="Bluetooth"
+						href="/home.zul?type=Bluetooth" />
+					<menuitem label="Wired"
+						href="/home.zul?type=Wired" />
+				</menupopup>
+			</menu>
+			<menuitem label="Ear Management" href="/searchMvc.zul" />
+			<menuitem label="Logout" href="/login.zul" style="float: right;"/>
+		</menubar>
+	</div>
+</vlayout>

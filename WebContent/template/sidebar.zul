@@ -1,0 +1,37 @@
+<vlayout xmlns:h="native" vflex="0" >
+	<label class="sidebar-title" value="- - - - - - - - - - - - - - - - - - - - - - - - - "/>
+	<image src="/img/earphone.gif" width="100%"/>
+	<separator class="sidebar-bar" />
+	
+	<label class="sidebar-title" value="SEARCH" />
+	<hlayout>
+		<textbox width="180px" id="keyword"/>
+		<button id="submitBtn" label="🔍">
+			<attribute name="onClick"><![CDATA[
+				Executions.sendRedirect("/home.zul?type="+keyword.getValue());
+				]]>
+			</attribute>
+		</button>	
+	</hlayout>
+	<separator class="sidebar-bar" />
+	
+	<label class="sidebar-title" value="Featured products" />
+	<hlayout>
+	<h:ul>
+		<h:li><a href="/home.zul?type=Apple"><image src="/img/apple.jpg" width="60px"/></a></h:li>
+		<h:li><a href="/home.zul?type=Sony"><image src="/img/sony.jpg" width="60px"/></a></h:li>
+		<h:li><a href="/home.zul?type=AKG"><image src="/img/akg.jpg" width="60px"/></a></h:li>
+		<h:li><a href="/home.zul?type=Bose"><image src="/img/bose.jpg" width="60px"/></a></h:li>
+		<h:li><a href="/home.zul?type=JBL"><image src="/img/jbl.jpg" width="60px"/></a></h:li>
+	</h:ul>
+	</hlayout>
+	<separator class="sidebar-bar" />
+	<label class="sidebar-title" value="CONTACT" />
+	<div>
+		<a href="https://www.facebook.com/vanthanh.vnua/"><image src="/img/facebook.jpg" width="60px"/></a>
+		<a href="#"><image src="/img/tiwtter.jpg" width="60px"/></a>
+	</div>
+	<label value="®"/>
+
+
+</vlayout>

@@ -1,0 +1,11 @@
+<window id="modalDialog" closable="true" title="Edit Popup"
+	border="normal" apply="controller.UpdateEarController">
+	<!-- Them cac truong thuoc tinh Ear -->
+	<vlayout>
+		<label id="msg" >
+			
+		</label>
+		<button id="updateEarBtn" hflex="1" label="Update Ear" />
+	</vlayout>
+	
+</window>
